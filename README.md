@@ -219,10 +219,6 @@ public void main() {
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=xdsswar&hide_border=false&border=d0d7de&background=ffffff&stroke=d0d7de&ring=2563EB&fire=2563EB&currStreakLabel=2563EB&currStreakNum=1f2328&sideNums=1f2328&sideLabels=1f2328&dates=656d76" alt="streak" />
 </p>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=xdsswar&theme=flat&column=4&row=2&margin-w=10&margin-h=10" alt="trophies" />
-</p>
-
 ---
 
 ### 🤝 Connect
