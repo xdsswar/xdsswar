@@ -12,7 +12,7 @@
 
 ### 🧠 About Me
 
-> Written in **Jux**, my own language (syntax highlighted as Java — it's that close):
+> Written in **Jux**, my own language (syntax highlighted as Java, since it's that close):
 
 ```java
 public class Developer {
@@ -30,27 +30,27 @@ public class Developer {
 
     public String[] building() {
         return new String[] {
-            "Jux — this very language + its juxc compiler",
-            "skia-fx — a GPU-accelerated OpenJFX renderer on Skia",
+            "Jux: this very language + its juxc compiler",
+            "skia-fx: a GPU-accelerated OpenJFX renderer on Skia",
             "Native libraries & JavaFX tooling for the JVM"
         };
     }
 
     public String motto() {
-        return $"${this.years} years in — still learning, still building.";
+        return $"${this.years} years in, still learning, still building.";
     }
 }
 
 public void main() {
     final var me = new Developer();
-    print(me.motto());   // 10 years in — still learning, still building.
+    print(me.motto());   // 10 years in, still learning, still building.
 }
 ```
 
-A bit more, in plain English: I'm happiest at the **high-level ↔ native** boundary — the kind of work that gets called "you can't do that on the JVM" right before I do it. Lately that's meant making **Jux** self-host and giving **skia-fx** a proper macOS/Linux backend.
+A bit more, in plain English: I'm happiest at the **high-level / native** boundary, the kind of work that gets called "you can't do that on the JVM" right before I do it. Lately that's meant making **Jux** self-host and giving **skia-fx** a proper macOS/Linux backend.
 
-- 🐧 On **Linux** all day &nbsp;·&nbsp; 🧩 Founder of **Xtreme Software Solutions** — [come hang out on Discord](https://discord.gg/Au6Em2eFue)
-- 💬 Happy to talk **language design, JavaFX internals, GPU rendering, JNI & FFI** — find me in the Discord
+- 🐧 On **Linux** all day &nbsp;·&nbsp; 🧩 Founder of **Xtreme Software Solutions**. [Come hang out on Discord](https://discord.gg/Au6Em2eFue)
+- 💬 Happy to talk **language design, JavaFX internals, GPU rendering, JNI & FFI**. Find me in the Discord.
 
 ---
 
@@ -80,7 +80,7 @@ Java is home base; everything else is whatever the problem needs.
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">⚡ Jux <img src="https://img.shields.io/badge/private-7C3AED?style=flat-square&labelColor=1f2328" alt="private" /> <img src="https://img.shields.io/badge/in%20dev-F59E0B?style=flat-square&labelColor=1f2328" alt="in dev" /></h3>
-      <p><b>My own programming language.</b> A statically-typed, Java/C#-flavored language with a working compiler (<code>juxc</code>) written in Rust. It transpiles <code>.jux</code> source to idiomatic, human-readable Rust — and uses <b>Rust's standard library (and any crate) as its own std</b>, surfaced in Jux syntax.</p>
+      <p><b>My own programming language.</b> A statically-typed, Java/C#-flavored language with a working compiler (<code>juxc</code>) written in Rust. It transpiles <code>.jux</code> source to idiomatic, human-readable Rust, then uses <b>Rust's standard library (and any crate) as its own std</b>, surfaced in Jux syntax.</p>
       <p align="center">
         <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
         <img src="https://img.shields.io/badge/Compiler-2563EB?style=flat-square&labelColor=1f2328" />
@@ -91,7 +91,7 @@ Java is home base; everything else is whatever the problem needs.
     </td>
     <td width="50%" valign="top">
       <h3 align="center"><a href="https://github.com/xdsswar/skiafx">🎨 skia-fx</a> <img src="https://img.shields.io/badge/experimental-F59E0B?style=flat-square&labelColor=1f2328" alt="experimental" /></h3>
-      <p>A fork of <b>OpenJFX 25</b> that rips out the aging Prism renderer and replaces it with a modern, GPU-first pipeline built on <b><a href="https://skia.org">Skia</a></b> — the engine behind Chrome, Android &amp; Flutter. <b>Drop-in compatible:</b> every <code>javafx.*</code> API is byte-for-byte identical, so your app runs unchanged — just faster. Adds uncapped frame rates, vector SVG, a bgfx-powered 3D scene graph with glTF loading, and a Chromium-based WebView.</p>
+      <p>A fork of <b>OpenJFX 25</b> that rips out the aging Prism renderer and replaces it with a modern, GPU-first pipeline built on <b><a href="https://skia.org">Skia</a></b>, the engine behind Chrome, Android &amp; Flutter. <b>Drop-in compatible:</b> every <code>javafx.*</code> API is byte-for-byte identical, so your app runs unchanged, just faster. Adds uncapped frame rates, vector SVG, a bgfx-powered 3D scene graph with glTF loading, and a Chromium-based WebView.</p>
       <p align="center">
         <img src="https://img.shields.io/badge/Java%2025-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
         <img src="https://img.shields.io/badge/Native%20Skia-007396?style=flat-square&labelColor=1f2328" />
@@ -105,23 +105,23 @@ Java is home base; everything else is whatever the problem needs.
 
 ---
 
-### ⚡ Jux — A Closer Look
+### ⚡ Jux: A Closer Look
 
-**Jux** is my own programming language: write code with the comfort of **Java/C# syntax**, and ship the **performance and safety of Rust**. The `juxc` compiler lowers `.jux` source to *idiomatic, human-readable Rust*, then lets `cargo`/`rustc` produce a native binary — so there's no separate runtime, and **Rust's standard library (plus any crate) is Jux's std**, surfaced in Jux syntax.
+**Jux** is my own programming language: write code with the comfort of **Java/C# syntax**, and ship the **performance and safety of Rust**. The `juxc` compiler lowers `.jux` source to *idiomatic, human-readable Rust*, then lets `cargo`/`rustc` produce a native binary, so there's no separate runtime, and **Rust's standard library (plus any crate) is Jux's std**, surfaced in Jux syntax.
 
 <table>
 <tr><td>
 
 **What makes it fun**
 
-- 🦀 **Inferred borrow checker** — write plain Java-style aliasing & mutation; the compiler infers ownership and borrows for you, cloning *only* when aliasing actually demands it. No `&`, no `mut`, no lifetimes.
-- ➕ **Real operator overloading** — `operator+`, `operator==`, `operator string`, `operator hash` lower to genuine `Add` / `PartialEq` / `Display` impls.
-- 🪄 **String interpolation** — `$"Hello, ${name}!"`
-- 🧱 **Full OOP** — `final`/`abstract` classes, `interface`, `extends`/`implements`, `super(...)`, ctor overloading, statics
-- 🧩 **Records & C#-style properties** — `record Point(int x, int y)`, `{ get; set; }`
+- 🦀 **Inferred borrow checker:** write plain Java-style aliasing & mutation; the compiler infers ownership and borrows for you, cloning *only* when aliasing actually demands it. No `&`, no `mut`, no lifetimes.
+- ➕ **Real operator overloading:** `operator+`, `operator==`, `operator string`, `operator hash` lower to genuine `Add` / `PartialEq` / `Display` impls.
+- 🪄 **String interpolation:** `$"Hello, ${name}!"`
+- 🧱 **Full OOP:** `final`/`abstract` classes, `interface`, `extends`/`implements`, `super(...)`, ctor overloading, statics
+- 🧩 **Records & C#-style properties:** `record Point(int x, int y)`, `{ get; set; }`
 - 🧬 **Generics** (bounded & const) · **pattern matching** & exhaustive `enum`s
-- 🛟 **Nullable types** — `Node? peer` with the `!!` non-null assertion
-- 📦 **`import rust.std.*`** — pull in real Rust crates, called in Jux syntax
+- 🛟 **Nullable types:** `Node? peer` with the `!!` non-null assertion
+- 📦 **`import rust.std.*`:** pull in real Rust crates, called in Jux syntax
 
 </td><td>
 
@@ -146,8 +146,8 @@ public void main() {
 
     var sum = a + b;                  // operator+  ->  200c
     print($"sum=$sum, and a is still alive: $a");
-    // No manual .clone(), no &, no mut, no lifetimes —
-    // the compiler infers all of it. You just write Java.
+    // No manual .clone(), no &, no mut, no lifetimes.
+    // The compiler infers all of it. You just write Java.
 
     var path = new PathBuf();         // std::path::PathBuf::new()
     path.reserve(16);                 // camelCase -> snake_case
@@ -172,7 +172,7 @@ public void main() {
           <img src="https://github-readme-stats.vercel.app/api/pin/?username=xdsswar&repo=jux-toolkit&theme=default&hide_border=false&border_color=d0d7de&bg_color=ffffff&title_color=2563EB&icon_color=2563EB&text_color=1f2328" alt="jux-toolkit" />
         </a>
       </p>
-      <p align="center"><sub>Java 25 desktop framework powered by native webviews via Panama FFI — Java meets the web, natively.</sub></p>
+      <p align="center"><sub>Java 25 desktop framework powered by native webviews via Panama FFI. Java meets the web, natively.</sub></p>
     </td>
     <td width="50%" valign="top">
       <h3 align="center">nfx-lib</h3>
@@ -181,7 +181,7 @@ public void main() {
           <img src="https://github-readme-stats.vercel.app/api/pin/?username=xdsswar&repo=nfx-lib&theme=default&hide_border=false&border_color=d0d7de&bg_color=ffffff&title_color=2563EB&icon_color=2563EB&text_color=1f2328" alt="nfx-lib" />
         </a>
       </p>
-      <p align="center"><sub>JavaFX/JNI library for Windows — advanced title bar manipulation & custom window decorations.</sub></p>
+      <p align="center"><sub>JavaFX/JNI library for Windows: advanced title bar manipulation & custom window decorations.</sub></p>
     </td>
   </tr>
   <tr>
@@ -233,4 +233,4 @@ public void main() {
   <a href="https://discord.gg/Au6Em2eFue"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="discord" /></a>
 </p>
 
-<p align="center"><i>⭐ From <a href="https://github.com/xdsswar">xdsswar</a> — 10 years deep, still learning, still building.</i></p>
+<p align="center"><i>⭐ From <a href="https://github.com/xdsswar">xdsswar</a> · 10 years deep, still learning, still building.</i></p>
