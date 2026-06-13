@@ -74,12 +74,12 @@ Java is home base; everything else is whatever the problem needs.
 
 ### 🚩 Flagship Work
 
-> Some of my most ambitious projects are **private / closed-source** (in-development or private company work). Here's what I'm building:
+> My most ambitious projects, now **open-source** and in active development. Here's what I'm building:
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">⚡ Jux <img src="https://img.shields.io/badge/private-7C3AED?style=flat-square&labelColor=1f2328" alt="private" /> <img src="https://img.shields.io/badge/in%20dev-F59E0B?style=flat-square&labelColor=1f2328" alt="in dev" /></h3>
+      <h3 align="center"><a href="https://github.com/xdsswar/juxlang">⚡ Jux</a> <img src="https://img.shields.io/badge/public-2563EB?style=flat-square&labelColor=1f2328" alt="public" /> <img src="https://img.shields.io/badge/in%20dev-F59E0B?style=flat-square&labelColor=1f2328" alt="in dev" /></h3>
       <p><b>My own programming language.</b> A statically-typed, Java/C#-flavored language with a working compiler (<code>juxc</code>) written in Rust. It transpiles <code>.jux</code> source to idiomatic, human-readable Rust, then uses <b>Rust's standard library (and any crate) as its own std</b>, surfaced in Jux syntax.</p>
       <p align="center">
         <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
@@ -87,7 +87,7 @@ Java is home base; everything else is whatever the problem needs.
         <img src="https://img.shields.io/badge/LSP-2563EB?style=flat-square&labelColor=1f2328" />
         <img src="https://img.shields.io/badge/IntelliJ%20Plugin-2563EB?style=flat-square&labelColor=1f2328" />
       </p>
-      <p align="center"><sub>lex &rarr; parse &rarr; resolve &rarr; typecheck &rarr; lower-to-Rust &rarr; native binary.</sub></p>
+      <p align="center"><sub>lex &rarr; parse &rarr; resolve &rarr; typecheck &rarr; lower-to-Rust &rarr; native binary.</sub> · <a href="https://github.com/xdsswar/juxlang"><sub><b>View public repo →</b></sub></a></p>
     </td>
     <td width="50%" valign="top">
       <h3 align="center"><a href="https://github.com/xdsswar/skiafx">🎨 skia-fx</a> <img src="https://img.shields.io/badge/experimental-F59E0B?style=flat-square&labelColor=1f2328" alt="experimental" /></h3>
@@ -158,6 +158,8 @@ public void main() {
 </table>
 
 > **Pipeline:** `lex → parse → resolve → typecheck → lower-to-Rust → cargo build → native binary`
+>
+> 👉 **It's open-source:** [github.com/xdsswar/juxlang](https://github.com/xdsswar/juxlang)
 
 ---
 
